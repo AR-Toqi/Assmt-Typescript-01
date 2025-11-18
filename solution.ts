@@ -43,7 +43,7 @@ const person2 = new Person('Alice', 25);
 
 
 
-const rating = (value: number): number=>{
+const rating = (value: number): number => {
     if (value >= 0 && value <= 5){
         return +(value.toFixed(1))
     } else{
@@ -106,10 +106,10 @@ const myBook: Book = {
   publishedYear: 1925,
   isAvailable: true,
 };
-// printBookDetails(myBook);
 
 
-const getUniqueValues = (arr1: (string | number)[], arr2: (string | number)[]): (string | number)[]=> {
+
+const getUniqueValues = (arr1: (string | number)[], arr2: (string | number)[]): (string | number)[] => {
     const uniqueValues: (string | number)[] = [];
 
     for (let i = 0; i < arr1.length; i++){
@@ -141,7 +141,7 @@ const getUniqueValues = (arr1: (string | number)[], arr2: (string | number)[]): 
 };
 
 const array1 = [1, 2, 3, 4, 5];
-const array2 = [3, 4, 5, 6, 7]; 
+const array2 = [3, 4, 5, 3, 6, 7]; 
 
 
 type Product = {
@@ -154,7 +154,7 @@ type Product = {
 const calculateTotalPrice = (arr: Product[]): number => {
     if (arr.length === 0) return 0;
     
-    const countTotal = arr.map(product =>{
+    const countTotal = arr.map(product => {
         const {price, quantity, discount} = product;
         const baseTotal = price * quantity;
         if(discount){
